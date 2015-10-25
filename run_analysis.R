@@ -13,6 +13,7 @@ if (!"UCI HAR Dataset" %in% files){
 
 
 # Read the 'features.txt. file in table format and find the indices that include the words 'mean' and 'std'.
+# (This includes 'meanFreq'. I took 'meanFreq' to be another mean in the data set.)
 featureNames <- read.table("UCI HAR Dataset/features.txt")[,2]
 MeanStdIndex <- grep("mean|std", featureNames)
 # Create new table that contains ovly the feature names that contain the words 'mean' and 'std'.
@@ -91,4 +92,4 @@ dataSet <- rbind(trainSet, testSet)
 meansSet <- aggregate(dataSet[,-(1:2)], list(subject = dataSet$subject,  activity = dataSet$activity), mean)
 
 # Save the tabkle 'meansSet'.
-tidySet <- write.table(meansSet, file = "tidy_set.txt", row.name=FALSE, sep = " ")
+write.table(meansSet, file = "tidy_set.txt", row.name=FALSE, sep = " ")
