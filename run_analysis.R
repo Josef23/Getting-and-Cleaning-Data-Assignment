@@ -16,6 +16,9 @@ if (!"UCI HAR Dataset" %in% files){
 featureNames <- read.table("UCI HAR Dataset/features.txt")[,2]
 MeanStdIndex <- grep("mean|std", featureNames)
 # Create new table that contains ovly the feature names that contain the words 'mean' and 'std'.
+# (I didn't change the feature names to something "prettier" because I am in no position to know the 
+# significance of each abreviation used in the names. If I was the initial data collector though, I would
+# definitely try to do a better job than this.)
 featureNamesMeanStd <- featureNames[MeanStdIndex]
 
 
