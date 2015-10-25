@@ -35,3 +35,49 @@ Assignment description:
     Good luck!
 
 
+Solution description:
+    
+    Download dataset from the web and unzip it if it is not already present and unziped in the working directory.
+    
+    Read the features file and find the indices that include the words 'mean' and 'std'. This includes 'meanFreq'.
+    I took 'meanFreq' to be another mean in the data set.
+    
+    Create new table that contains ovly the feature names that contain the words 'mean' and 'std'. I didn't change
+    the feature names to something "prettier" because I am in no position to know the significance of each
+    abreviation used in the names. If I was the initial data collector though, I would try to do a better job than
+    this.
+    
+    Read the 'activity_labels.txt' file in table format and change the column names to something descriptive.
+    
+    Read the 'y_train.txt' file in table format and change the column names to something descriptive.
+    
+    Match the code numbers in the table 'yTrain' with descriptive activity names found in table 'activityLabels'
+    and replace them.
+    
+    Read the 'x_train.txt' file in table format, keep only the columns indicated by the 'MeanStdIndex' indexer and
+    give them the apropriate column names from 'featureNamesMeanStd'.
+    
+    Read the 'subject_train.txt' file in table format and change the column names to something descriptive.
+    
+    Create a new table 'trainSet' by binding 'subjectTrain', 'yTrain' and 'xTrainMeanStd' tables column wise.
+    
+    Read the 'y_Test.txt' file in table format and change the column names to something descriptive.
+    
+    Match the code numbers in the table 'yTest' with descriptive activity names found in table 'activityLabels' and
+    replace them.
+    
+    Read the 'x_Test.txt' file in table format, keep only the columns indicated by the 'MeanStdIndex' indexer and
+    give them the apropriate column names from 'featureNamesMeanStd'.
+    
+    Read the 'subject_train.txt' file in table format and change the column names to something descriptive.
+    
+    Create a new table 'trainSet' by binding 'subjectTrain', 'yTrain' and 'xTrainMeanStd' tables column wise.
+    
+    Create a new table 'dataSet' by binding 'trainSet' and 'testSet' tables row wise.
+    
+    Shape the table 'dataSet' into subsets according to the columns 'dataSet$subject' and 'dataSet$activity' and
+    calculate the means of the columns in these subsets. Create a new table 'meansSet' that contains all the means 
+    of these subsets by 'dataSet$subject' and 'dataSet$activity' pairs.
+    
+    Save the table 'meansSet' as 'tidy_set.txt'.
+    
