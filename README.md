@@ -44,40 +44,39 @@ Solution description:
     
     Create new table that contains ovly the feature names that contain the words 'mean' and 'std'. I didn't change
     the feature names to something "prettier" because I am in no position to know the significance of each
-    abreviation used in the names. If I was the initial data collector though, I would try to do a better job than
-    this.
+    abreviation used in the names. If I was the initial data collector though, I would try to do be more descriptive.
     
-    Read the 'activity_labels.txt' file in table format and change the column names to something descriptive.
+    Read the activity_labels file and change the column names to something descriptive.
     
-    Read the 'y_train.txt' file in table format and change the column names to something descriptive.
+    Read the y_train file and change the column names to something descriptive.
     
-    Match the code numbers in the table 'yTrain' with descriptive activity names found in table 'activityLabels'
-    and replace them.
-    
-    Read the 'x_train.txt' file in table format, keep only the columns indicated by the 'MeanStdIndex' indexer and
-    give them the apropriate column names from 'featureNamesMeanStd'.
-    
-    Read the 'subject_train.txt' file in table format and change the column names to something descriptive.
-    
-    Create a new table 'trainSet' by binding 'subjectTrain', 'yTrain' and 'xTrainMeanStd' tables column wise.
-    
-    Read the 'y_Test.txt' file in table format and change the column names to something descriptive.
-    
-    Match the code numbers in the table 'yTest' with descriptive activity names found in table 'activityLabels' and
+    Match the code numbers of the y_train file with descriptive activity names found in activity_labels file and
     replace them.
     
-    Read the 'x_Test.txt' file in table format, keep only the columns indicated by the 'MeanStdIndex' indexer and
-    give them the apropriate column names from 'featureNamesMeanStd'.
+    Read the x_train file, keep only the columns with names that contain the words 'mean' and 'std' and give them
+    apropriate column names.
     
-    Read the 'subject_train.txt' file in table format and change the column names to something descriptive.
+    Read the subject_train file and change the column names to something descriptive.
     
-    Create a new table 'trainSet' by binding 'subjectTrain', 'yTrain' and 'xTrainMeanStd' tables column wise.
+    Create a new table with all the data from the training files by merging them column wise.
     
-    Create a new table 'dataSet' by binding 'trainSet' and 'testSet' tables row wise.
+    Read the y_Test file and change the column names to something descriptive.
     
-    Shape the table 'dataSet' into subsets according to the columns 'dataSet$subject' and 'dataSet$activity' and
-    calculate the means of the columns in these subsets. Create a new table 'meansSet' that contains all the means 
-    of these subsets by 'dataSet$subject' and 'dataSet$activity' pairs.
+    Match the code numbers of the yTest file with descriptive activity names found in activity_labels file and
+    replace them.
     
-    Save the table 'meansSet' as 'tidy_set.txt'.
+    Read the x_Test file, keep only the columns with names that contain the words 'mean' and 'std' and give them
+    apropriate column names.
+    
+    Read the subject_test file and change the column names to something descriptive
+    
+    Create a new table with all the data from the test files by merging them column wise.
+    
+    Create a new table with all the data from the merged test and training files by merging them row wise.
+    
+    Shape the table with all the data into subsets according to the subject and activity columns and calculate the
+    means of the columns in these subsets. Create a new table that will contain all the means of these subsets by
+    subject and activity pairs.
+    
+    Save the new table containing the means as 'tidy_set.txt'.
     
