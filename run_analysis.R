@@ -85,7 +85,7 @@ dataSet <- rbind(trainSet, testSet)
 # for the activity name and 1 for the subject number). Also running the line
 # mean(dataSet[dataSet$subject==subNumber&dataSet$activity==activityName, columnNumber]
 # for any given subNumber, activityName and columnNumber in the 'dataSet' table, retuns the correct mean.) 
-meansSet <- aggregate(dataSet[,-(1:2)], list(subject = dataSet$subject,  activity = dataSet$activity), colMeans)
+meansSet <- aggregate(dataSet[,-(1:2)], list(subject = dataSet$subject,  activity = dataSet$activity), mean)
 
 # Save the tabkle 'meansSet'.
 tidySet <- write.table(meansSet, file = "tidy_set.txt", row.name=FALSE, sep = " ")
