@@ -19,7 +19,7 @@ MeanStdIndex <- grep("mean|std", featureNames)
 # Create new table that contains ovly the feature names that contain the words 'mean' and 'std'.
 # (I didn't change the feature names to something "prettier" because I am in no position to know the 
 # significance of each abreviation used in the names. If I was the initial data collector though, I would
-# definitely try to do a better job than this.)
+#  try to do a better job than this.)
 featureNamesMeanStd <- featureNames[MeanStdIndex]
 
 
@@ -91,5 +91,5 @@ dataSet <- rbind(trainSet, testSet)
 # for any given subNumber, activityName and columnNumber in the 'dataSet' table, retuns the correct mean.) 
 meansSet <- aggregate(dataSet[,-(1:2)], list(subject = dataSet$subject,  activity = dataSet$activity), mean)
 
-# Save the tabkle 'meansSet'.
+# Save the table 'meansSet' as 'tidy_set.txt'.
 write.table(meansSet, file = "tidy_set.txt", row.name=FALSE, sep = " ")
