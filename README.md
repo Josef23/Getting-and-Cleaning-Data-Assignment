@@ -44,7 +44,7 @@ Solution description:
     
     Create new table that contains ovly the feature names that contain the words 'mean' and 'std'. I didn't change
     the feature names to something "prettier" because I am in no position to know the significance of each
-    abreviation used in the names. If I was the initial data collector though, I would try to do be more descriptive.
+    abbreviation used in the names. If I was the initial data collector though, I would try to do be more descriptive.
     
     Read the activity_labels file and change the column names to something descriptive.
     
